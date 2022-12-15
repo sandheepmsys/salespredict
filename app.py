@@ -5,6 +5,7 @@ from sklearn.ensemble import ExtraTreesRegressor, RandomForestRegressor
 import pandas as pd
 import numpy as np
 from sklearn.metrics import r2_score
+from flask_cors import CORS
 from datetime import datetime
 import pandas.api.types
 import os
@@ -15,6 +16,7 @@ import warnings
 warnings.warn('ignore', category=FutureWarning)
 
 app = Flask(__name__)
+cors = CORS(app)
 ALLOWED_EXTENSIONS = (['csv'])
 app.secret_key = "abcdef"
 
